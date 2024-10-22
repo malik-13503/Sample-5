@@ -832,17 +832,6 @@ button:active {
     border-radius: 25px;
 }
 
-@media only screen and (max-width:360px){
-    .container{
-        width: 10%;
-        margin-right:-100px;
-    }
-}
-@media screen and (max-width: 360px) {
-    .container {
-        transform: scale(0.5); /* Scale down to 50% */
-        transform-origin: top left; /* Set the origin for scaling */
-    }
 
     /* Ensure the app container doesn't overflow the screen */
     body {
