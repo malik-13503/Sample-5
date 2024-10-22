@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo1.png" type="image/x-icon">
+    <title>UVK City Spin Wheel</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Swiper styles
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
+<!-- Include Swiper JS -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<!-- <script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1, // Show one slide at a time
+        spaceBetween: 10, // Space between slides
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000, // Change the image every 3 seconds
+            disableOnInteraction: false, // Continue autoplay after user interactions
+        },
+        loop: true, // Enable looping of slides
+    });
+</script> -->
+</head>
+<body>
+
+    <!-- <div id="loginModal" class="login-modal">
+        <div class="login-modal-content">
+            <div class="login-logo">
+                <img src="logo1.png" alt="UVK City Logo">
+            </div>
+            <h2>Login to UVK City</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <button id="loginButton" class="login-btn">Login</button>
+            <p id="loginErrorMessage" class="error-message"></p>
+        </div>
+    </div> -->
+    
+
+<div id="dailyRewardMessage" class="reward-message" style="display: none;">
+    <p id="rewardText">You have received 100 Ucoins as a daily reward!</p>
+</div>
+
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="logo1.png" alt="UVK City Logo">
+            </div>
+            <div class="info">
+                <span class="city-name">UVK CITY</span>
+                <div id="citizenDisplay" style="font-size: 15px; font-weight: bold;"></div>
+
+            </div>
+            <div class="ucoins">
+                <span class="coin-balance">0 Ucoin</span>
+            </div>
+            
+        </div> 
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="banner.jpg" alt="Promotional Image 1" />
+                </div>
+                <!-- <div class="swiper-slide">
+                    <img src="banner.jpg" alt="Promotional Image 2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="image3.jpg" alt="Promotional Image 3" />
+                </div> -->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation (optional) -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        
+            
+            <div class="wheel-container">
+                <div class="wheel">
+                    <canvas id="wheelCanvas" width="300" height="300"></canvas> 
+                    <div class="center-pointer">
+                        <span>Spin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultModal" class="modal">
+                <div class="modal-content">
+                    <h2 id="resultMessage">Congratulations! You won 10 Ucoins!</h2>
+                    <button id="closeModalButton" class="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="upButton">UP</button>
+                <button id="spinButton" disabled>SPIN</button> 
+                <button id="downButton">DW</button>
+            </div>
+
+            <div class="bet-amount">
+                <label for="betInput">Enter Bet Amount (Ucoin):</label>
+                <input type="number" id="betInput" min="1" max="900" value="10" />
+            </div>
+            <p id="winMessage">WIN $100 WITH 500K UCOIN</p>
+        </div>
+        
+    </div>
+    <div id="giftContainer">
+        <img id="giftImage" src="gift.png" alt="Gift">
+        <div class="fire"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
